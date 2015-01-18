@@ -1,12 +1,14 @@
 %div.row
   %div.col-md-8
-    %h2= report.formatted_title
+    %span.h2= report.formatted_title
   %div.col-md-4
     Download Report: 
-    = link_to 'CSV', formatted_dossier_report_path('csv', report), class: 'btn'
-    = link_to 'Excel', formatted_dossier_report_path('xls', report), class: 'btn'
+    = link_to 'CSV', formatted_dossier_report_path('csv', report), class: 'btn btn-sm'
+    = link_to 'Excel', formatted_dossier_report_path('xls', report), class: 'btn btn-sm'
     
-= render_options(report)
+%div.row
+  %div.col-md-12
+    = render_options(report)
 
 %table.table.table-striped
   %thead
