@@ -25,7 +25,13 @@ module Dossier
     end
 
     def options_params
-      params[:options].presence || {}
+      optparams = params[:options].presence || {}
+      begin
+        optparams[:user] = current_user 
+      rescue
+      end
+      
+      optparams
     end
   end
 end
