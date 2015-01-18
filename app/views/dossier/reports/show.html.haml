@@ -2,9 +2,10 @@
   %div.col-md-8
     %span.h2= report.formatted_title
   %div.col-md-4
-    Download Report: 
-    = link_to 'CSV', formatted_dossier_report_path('csv', report), class: 'btn btn-sm'
-    = link_to 'Excel', formatted_dossier_report_path('xls', report), class: 'btn btn-sm'
+    %div.pull-right
+      Download Report: 
+      = link_to 'CSV', formatted_dossier_report_path('csv', report), class: 'btn btn-sm'
+      = link_to 'Excel', formatted_dossier_report_path('xls', report), class: 'btn btn-sm'
     
 %div.row
   %div.col-md-12
