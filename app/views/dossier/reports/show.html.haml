@@ -1,6 +1,8 @@
 %h2= report.formatted_title
 
-= link_to 'Download CSV', formatted_dossier_report_path('csv', report), class: 'download-csv'
+Download Report: 
+= link_to 'CSV', formatted_dossier_report_path('csv', report), class: 'download-csv'
+= link_to 'Excel', formatted_dossier_report_path('xls', report), class: 'download-csv'
 
 = render_options(report)
 
