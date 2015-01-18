@@ -1,10 +1,11 @@
-%h2= report.formatted_title
-
-Download Report: 
-= link_to 'CSV', formatted_dossier_report_path('csv', report), class: 'download-csv'
-,&nbsp;
-= link_to 'Excel', formatted_dossier_report_path('xls', report), class: 'download-csv'
-
+%div.row
+  %div.col-md-8
+    %h2= report.formatted_title
+  %div.col-md-4
+    Download Report: 
+    = link_to 'CSV', formatted_dossier_report_path('csv', report), class: 'btn'
+    = link_to 'Excel', formatted_dossier_report_path('xls', report), class: 'btn'
+    
 = render_options(report)
 
 %table.table.table-striped
